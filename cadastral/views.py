@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-
+from django.core.paginator import Paginator
 from .models import News, Act
 
 
@@ -11,3 +11,18 @@ def index(request):
 def valuation(request):
     qs = Act.objects.order_by("-pub_date")[:5]
     return render(request, "valuation.html", {"data": qs})
+
+
+def acts(request):
+    qs = Act.objects.order_by("-pub_date")
+    paginator = Paginator(qs, 20)
+    page_number = request.GET.get("page")
+    page = paginator.get_page(page_number)
+    return render(
+        request,
+        "acts.html",
+        {
+            "page": page,
+            "paginator": paginator,
+        },
+    )

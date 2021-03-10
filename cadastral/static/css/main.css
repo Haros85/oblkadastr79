@@ -20,9 +20,9 @@
  * 11. pricing section
  * 12. testimomials section 
  * 13. faq section 
- *	14. ad-section 
- *	15. call-to-action section
- *	16. footer
+ * 14. ad-section 
+ * 15. call-to-action section
+ * 16. footer
  *
  * =================================================================== 
  */
@@ -2568,3 +2568,52 @@ footer ul li {
  * acts
  * -
  */
+
+.pagination {
+	display: -ms-flexbox;
+	display: flex;
+	padding-left: 0;
+	list-style: none;
+	border-radius: 0.25rem;
+	justify-content: center;
+}
+  
+.pagination__container {
+    display: inline-flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    height: 50px;
+    align-items: center;
+}
+
+.pagination__item {
+    position: relative;
+    margin: 0 20px;
+}
+.pagination__item:first-child{
+    margin-left: 0;
+}
+.pagination__item:last-child {
+    margin-right: 0;
+}
+
+.pagination__item_active {
+	font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #05bca9 !important;
+}
+.pagination__link {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+	color: #38424e !important;
+}
+.pagination__link:hover {
+	color: #05bca9 !important;
+}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Акты{% endblock %}
+{% load static %}
+{% block nav %}
+{% endblock nav %}
+{% block content %}
+<section id="acts">
+
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+            <h5>Акты</h5>
+            <h1>Акты об определении кадастровой стоимости</h1>
+        </div>   		
+    </div>
+
+      <div class="row">
+      	<div class="col-twelve">
+      		<div class="table-responsive">
+      			<table>
+					  <thead>
+					    <tr>
+					      <th>Номер акта</th>
+					      <th>Дата акта</th>
+					      <th>Количество объектов недвижимости, в отношении которых составлен акт</th>					    
+					    </tr>
+					  </thead>
+					  <tbody>
+						{% for act in page %}
+					    <tr>
+					      <td><a href="/media/{{act.path}}">{{act.number}}</a></td>
+					      <td>{{act.pub_date|date:"d.m.Y г."}}</td>
+					      <td>{{act.num_obj}} объектов недвижимости, указаны в настоящем акте</td>					    
+					    </tr>
+						{% endfor %}
+					  </tbody>
+					</table>
+      		</div>
+              <div class="text-center">
+                {% if page.has_other_pages %} 
+                    {% include "paginator.html" with items=page paginator=paginator%}
+                {% endif %}  
+              </div> 
+      	</div>
+
+      </div>  
+</section>
+{% endblock %}
