@@ -1,0 +1,30 @@
+<!-- news block -->
+{% load static %}
+<section id="news">
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+            <h5>Новости</h5>
+            <h1>Всё о кадастре</h1>
+        </div>   		
+    </div>
+
+    <div class="row news-content">
+
+     <div class="row half-bottom">
+        {% for news in data %}
+         <div class="col-six tab-full">
+             <code>{{news.pub_date|date:"d.m.Y"}}</code>
+             <h3>{{news.title}}</h3>
+             <p><img src="media/{{ news.image }}"></p>
+         </div>
+        {% endfor %} 
+         <div class="col-six tab-full text-right">
+             <a class="button button-primary" href="#">Все новости</a>
+         </div>
+         
+     </div>
+
+   </div>
+
+</section>
+<!-- /news block --> 

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Кадастровая оценка{% endblock %}
+{% block nav %}
+    {% include 'valuation/nav.html' %}
+    {% include 'valuation/main.html' %}
+{% endblock nav %}
+{% block content %}
+{% load static %}
+{% include 'valuation/report.html' %}
+{% include 'valuation/acts.html' %}
+{% endblock %}
