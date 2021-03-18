@@ -1,0 +1,2 @@
+offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download
+developer.microsoft.com/en-us/windows/downloads/virtual-machines/

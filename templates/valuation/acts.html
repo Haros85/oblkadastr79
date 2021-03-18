@@ -1,4 +1,5 @@
-   <!-- Process Section
+{% load cadastral_filters %}
+<!-- Process Section
    ================================================== -->
 <section id="acts">
 
@@ -25,7 +26,7 @@
 					    <tr>
 					      <td><a href="files/{{act.path}}">{{act.number}}</a></td>
 					      <td>{{act.pub_date|date:"d.m.Y г."}}</td>
-					      <td>{{act.num_obj}} объектов недвижимости, указанных в настоящем акте</td>					    
+					      <td>{{act.num_obj|count_objects}} недвижимости, указанных в настоящем акте</td>					    
 					    </tr>
 						{% endfor %}
 					  </tbody>
