@@ -1,0 +1,33 @@
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+            <h5>Глоссарий</h5>
+            <h1>Термины и определения</h1>
+        </div>   		
+    </div>
+      <div class="row flex-container">
+    
+         <div id="testimonial-slider">
+
+            <ul class="slides">
+               {% for termin in termins%}
+               <li>
+               	<div class="testimonial-author">
+                    	<div class="author-info">
+                    		{{termin.title}}
+                    		<span class="position">{{termin.doc}}</span>
+                    	</div>
+                  </div>
+                  <p> {{termin.text}}</p>                  
+             	</li> <!-- /slide -->
+               {% endfor %}
+            </ul> <!-- /slides -->
+
+         </div> <!-- /testimonial-slider -->         
+        
+      </div> <!-- /flex-container -->
+
+   </section> <!-- /testimonials -->

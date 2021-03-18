@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
-from .models import News, Act
+from .models import News, Act, Glossary
 
 
 def index(request):
@@ -9,8 +9,9 @@ def index(request):
 
 
 def valuation(request):
+    termins = Glossary.objects.all()[:1]
     qs = Act.objects.order_by("-pub_date")[:5]
-    return render(request, "valuation.html", {"data": qs})
+    return render(request, "valuation.html", {"termins":termins, "data": qs})
 
 
 def acts(request):

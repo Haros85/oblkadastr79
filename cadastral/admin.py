@@ -24,6 +24,7 @@ class ActAdmin(admin.ModelAdmin):
         "path",
     )
     search_fields = ("number",)
+    list_filter = ("type_act",)
 
 
 admin.site.register(News, NewsAdmin)
