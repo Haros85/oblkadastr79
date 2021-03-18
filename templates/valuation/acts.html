@@ -18,20 +18,25 @@
 					    <tr>
 					      <th>Номер акта</th>
 					      <th>Дата акта</th>
-					      <th>Количество объектов недижимости, в отношении которых составлен акт</th>					    
+					      <th>Количество объектов недвижимости, в отношении которых составлен акт</th>					    
 					    </tr>
 					  </thead>
 					  <tbody>
 						{% for act in data%}
+						{% if act.type_act == 'act' %}
 					    <tr>
-					      <td><a href="files/{{act.path}}">{{act.number}}</a></td>
+					      <td><a href="/media/{{act.path}}">{{act.number}}</a></td>
 					      <td>{{act.pub_date|date:"d.m.Y г."}}</td>
-					      <td>{{act.num_obj|count_objects}} недвижимости, указанных в настоящем акте</td>					    
+					      <td>{{act.num_obj|count_objects}} объектов недвижимости, указаны в настоящем акте</td>					    
 					    </tr>
+						{% endif %}
 						{% endfor %}
 					  </tbody>
 					</table>
-      		</div>     		
+      		</div>
+		    <div class="col-twelve tab-full text-right">
+                <a class="button button-primary" href="{% url 'acts' %}">Все акты</a>
+            </div>
       	</div>
       </div> <!--row -->      
    	

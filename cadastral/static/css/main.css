@@ -20,9 +20,9 @@
  * 11. pricing section
  * 12. testimomials section 
  * 13. faq section 
- * 14. ad-section 
- * 15. call-to-action section
- * 16. footer
+ *	14. ad-section 
+ *	15. call-to-action section
+ *	16. footer
  *
  * =================================================================== 
  */
@@ -1730,7 +1730,8 @@ a.menu-toggle {
 	position: relative;
 }
 #testimonial-slider p {
-	font-family: "raleway-medium", sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
 	font-size: 2.5rem;
 	line-height: 1.8;
 	color: #8d8d8d;
@@ -1738,7 +1739,7 @@ a.menu-toggle {
 #testimonial-slider p::before, #testimonial-slider p::after {
 	display: inline;
 	font-family: Arial, sans-serif;
-	color: #c7c7c7;
+	color: #8d8d8d;
 	font-size: 6rem;
 	line-height: 0;
 	vertical-align: bottom;
@@ -1766,7 +1767,7 @@ a.menu-toggle {
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	font-family: "raleway-heavy", sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 1.5rem;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -2568,8 +2569,7 @@ footer ul li {
  * acts
  * -
  */
-
-.pagination {
+ .pagination {
 	display: -ms-flexbox;
 	display: flex;
 	padding-left: 0;

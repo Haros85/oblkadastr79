@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Акты{% endblock %}
 {% load static %}
+{% load cadastral_filters %}
 {% block nav %}
+    {% include "nav.html" %}
 {% endblock nav %}
 {% block content %}
 <section id="acts">
-
     <div class="row section-intro">
         <div class="col-twelve with-bottom-line">
             <h5>Акты</h5>
@@ -29,7 +30,7 @@
 					    <tr>
 					      <td><a href="/media/{{act.path}}">{{act.number}}</a></td>
 					      <td>{{act.pub_date|date:"d.m.Y г."}}</td>
-					      <td>{{act.num_obj}} объектов недвижимости, указаны в настоящем акте</td>					    
+					      <td>{{act.num_obj|count_objects}} недвижимости, указаны в настоящем акте</td>					    
 					    </tr>
 						{% endfor %}
 					  </tbody>

@@ -130,3 +130,7 @@ dmypy.json
 
 # static
 /static
+/cadastral/static/admin
+
+#backup
+/backup

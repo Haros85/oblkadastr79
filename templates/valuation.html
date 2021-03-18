@@ -6,6 +6,43 @@
 {% endblock nav %}
 {% block content %}
 {% load static %}
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+            <h5>Глоссарий</h5>
+            <h1>Термины и определения</h1>
+        </div>   		
+    </div>  	
+
+      <div class="row flex-container">
+    
+         <div id="testimonial-slider">
+
+            <ul class="slides">
+
+               <li>
+               	<div class="testimonial-author">
+                    	<div class="author-info">
+                    		Земельный участок
+                    		<span class="position">Земельный Кодекс Российской Федерации от 25.10.2001 №136-ФЗ</span>
+                    	</div>
+                  </div>
+
+                  <p>
+                  недвижимая вещь, которая представляет собой часть земной поверхности и имеет характеристики, позволяющие определить ее в качестве индивидуально определенной вещи  						
+                  </p>                  
+             	</li> <!-- /slide -->
+
+            </ul> <!-- /slides -->
+
+         </div> <!-- /testimonial-slider -->         
+        
+      </div> <!-- /flex-container -->
+
+   </section> <!-- /testimonials -->
 {% include 'valuation/report.html' %}
 {% include 'valuation/acts.html' %}
 {% endblock %}
